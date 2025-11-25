@@ -2,13 +2,13 @@
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://wikibuda.github.io/faro_cuantico_familiar/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)](CONTRIBUTING.md)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)](docs/CONTRIBUTING.md)
 
 ## 🚀 Acceso Rápido
 
 - **🌐 [Sitio Web en Vivo](https://wikibuda.github.io/faro_cuantico_familiar/)** - ¡Pruébalo ahora!
 - **📄 [Licencia MIT](LICENSE)** - Términos de uso
-- **🤝 [Guía de Contribuciones](CONTRIBUTING.md)** - ¡Únete al desarrollo!
+- **🤝 [Guía de Contribuciones](docs/CONTRIBUTING.md)** - ¡Únete al desarrollo!
 - **📚 [Documentación Completa](docs/)** - Todo lo que necesitas saber
 
 ## 📞 Enlaces Importantes
@@ -28,11 +28,14 @@
 
 ## 🔧 Desarrollo
 
-### 📋 Guías Paso a Paso
-- **[🚀 Instalación](docs/INSTALACION.md)**
-- **[📖 Uso](docs/USO.md)**
-- **[🏗️ Estructura](docs/ESTRUCTURA.md)**
-- **[🎯 Contribuciones](docs/CONTRIBUTING.md)**
+
+## 📚 Documentación Completa
+
+- **[🚀 Instalación](docs/INSTALACION.md)** - Configuración técnica
+- **[📖 Uso](docs/USO.md)** - Guía completa de usuario
+- **[🏗️ Estructura](docs/ESTRUCTURA.md)** - Arquitectura del sistema
+- **[🤝 Contribuciones](docs/CONTRIBUTING.md)** - Cómo colaborar
+- **[🔒 Privacidad](docs/PRIVACY.md)** - Política de datos
 
 ### ⚖️ Legal
 - **[📄 Licencia MIT](LICENSE)** - Términos completos
