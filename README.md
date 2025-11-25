@@ -1,8 +1,68 @@
 # 🌌 Faro Cuántico Familiar
 
-![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)
+# 🌌 Faro Cuántico Familiar
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://wikibuda.github.io/faro_cuantico_familiar/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)](CONTRIBUTING.md)
+
+## 🚀 Acceso Rápido
+
+- **🌐 [Sitio Web en Vivo](https://wikibuda.github.io/faro_cuantico_familiar/)** - ¡Pruébalo ahora!
+- **📄 [Licencia MIT](LICENSE)** - Términos de uso
+- **🤝 [Guía de Contribuciones](docs/CONTRIBUTING.md)** - ¡Únete al desarrollo!
+- **📚 [Documentación Completa](docs/)** - Todo lo que necesitas saber
+
+## 📞 Enlaces Importantes
+
+### 🔗 Navegación Principal
+- **[Dashboard Principal](https://wikibuda.github.io/faro_cuantico_familiar/#dashboard)**
+- **[Biblioteca de Cuentos](https://wikibuda.github.io/faro_cuantico_familiar/#biblioteca)**
+- **[Analizador Profundo](https://wikibuda.github.io/faro_cuantico_familiar/#analizador)**
+- **[Aventuras Interactivas](https://wikibuda.github.io/faro_cuantico_familiar/#interactivo)**
+- **[Mi Aprendizaje](https://wikibuda.github.io/faro_cuantico_familiar/#tutor)**
+
+### 📁 Estructura del Proyecto
+- **[📄 Código Fuente](index.html)** - Archivo principal
+- **[📊 Datos de Cuentos](data/cuentos_reales_COMPLETOS.json)** - Base de datos
+- **[📖 Documentación](docs/)** - Guías completas
+- **[🖼️ Assets](assets/)** - Recursos gráficos
+
+## 🔧 Desarrollo
+
+### 📋 Guías Paso a Paso
+- **[🚀 Instalación](docs/INSTALACION.md)**
+- **[📖 Uso](docs/USO.md)**
+- **[🏗️ Estructura](docs/ESTRUCTURA.md)**
+- **[🎯 Contribuciones](docs/CONTRIBUTING.md)**
+
+### ⚖️ Legal
+- **[📄 Licencia MIT](LICENSE)** - Términos completos
+- **[🔒 Política de Privacidad](docs/PRIVACY.md)** - Tu privacidad importa
+
+## 🌟 Demo en Vivo
+
+¡Prueba el sistema ahora mismo! 🚀
+**[https://wikibuda.github.io/faro_cuantico_familiar/](https://wikibuda.github.io/faro_cuantico_familiar/)**
+
+## 🤝 Contribuir
+
+¿Quieres mejorar el Faro Cuántico? 
+**[Lee nuestra guía de contribuciones](docs/CONTRIBUTING.md)**
+
+---
+
+<div align="center">
+
+**¿Te gusta el proyecto? ¡Dale una ⭐ en GitHub!**
+
+[![GitHub stars](https://img.shields.io/github/stars/wikibuda/faro_cuantico_familiar?style=social)](https://github.com/wikibuda/faro_cuantico_familiar/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/wikibuda/faro_cuantico_familiar?style=social)](https://github.com/wikibuda/faro_cuantico_familiar/network/members)
+
+</div>
+
+
+
 
 <div align="center">
 
