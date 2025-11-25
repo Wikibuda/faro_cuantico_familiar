@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Documentación - Faro Cuántico Familiar</title>
+    <style>
+        :root {
+            --color-magico: #ff6b6b;
+            --color-agua: #4ecdc4;
+            --color-tiempo: #45b7d1;
+            --color-sueño: #96ceb4;
+            --color-sabiduria: #feca57;
+            --color-purpura: #a78bfa;
+            --color-rosa: #f9a8d4;
+            --color-fondo: #0f0c29;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--color-fondo), #302b63, #24243e);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(78,205,196,0.1));
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 2px solid var(--color-magico);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--color-magico), var(--color-agua), var(--color-sabiduria));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .badge {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        
+        .nav-tab {
+            background: rgba(255,255,255,0.1);
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-tab:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-tab.active {
+            background: linear-gradient(135deg, var(--color-magico), var(--color-rosa));
+            border-color: var(--color-magico);
+        }
+        
+        .content-section {
+            display: none;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: aparecer 0.5s ease-out;
+        }
+        
+        @keyframes aparecer {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        h2 {
+            color: var(--color-agua);
+            margin: 25px 0 15px 0;
+            font-size: 2em;
+        }
+        
+        h3 {
+            color: var(--color-sabiduria);
+            margin: 20px 0 10px 0;
+            font-size: 1.5em;
+        }
+        
+        h4 {
+            color: var(--color-purpura);
+            margin: 15px 0 8px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        
+        code {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            border-left: 4px solid var(--color-agua);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.08);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid var(--color-sabiduria);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.12);
+        }
+        
+        .module-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            padding: 25px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        
+        .command {
+            background: rgba(0,0,0,0.4);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid var(--color-magico);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .json-example {
+            background: rgba(0,0,0,0.4);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid var(--color-purpura);
+            font-size: 0.9em;
+        }
+        
+        .tip {
+            background: rgba(254,202,87,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid var(--color-sabiduria);
+        }
+        
+        .warning {
+            background: rgba(255,107,107,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid var(--color-magico);
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .quote {
+            font-style: italic;
+            opacity: 0.8;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌌 Faro Cuántico Familiar</h1>
+            <p class="tagline">Donde los cuentos cobran vida y la magia es real ✨</p>
+            
+            <div class="badges">
+                <span class="badge">Versión 2.0.0</span>
+                <span class="badge">Licencia MIT</span>
+                <span class="badge">Magia 100%</span>
+                <span class="badge">34+ Cuentos</span>
+                <span class="badge">Responsive</span>
+            </div>
+        </header>
+
+        <div class="nav-tabs">
+            <div class="nav-tab active" onclick="mostrarSeccion('descripcion')">📖 Descripción</div>
+            <div class="nav-tab" onclick="mostrarSeccion('instalacion')">🚀 Instalación</div>
+            <div class="nav-tab" onclick="mostrarSeccion('uso')">🎯 Uso</div>
+            <div class="nav-tab" onclick="mostrarSeccion('modulos')">🎨 Módulos</div>
+            <div class="nav-tab" onclick="mostrarSeccion('tecnica')">🔧 Técnica</div>
+            <div class="nav-tab" onclick="mostrarSeccion('contribuir')">🤝 Contribuir</div>
+        </div>
+
+        <!-- SECCIÓN DESCRIPCIÓN -->
+        <div id="descripcion" class="content-section active">
+            <h2>🎯 ¿Qué es el Faro Cuántico?</h2>
+            <p>Un sistema interactivo y mágico diseñado para fomentar la lectura y el aprendizaje en niños a través de cuentos interactivos, análisis de patrones narrativos y un tutor evolutivo.</p>
+
+            <h3>✨ Características Principales</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>📚 Biblioteca Interactiva</h4>
+                    <p>34+ cuentos con búsqueda y filtros inteligentes</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🧠 Analizador Profundo</h4>
+                    <p>Detecta arquetipos, emociones y estructuras narrativas</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎭 Aventuras Interactivas</h4>
+                    <p>Cuentos donde las decisiones cambian el destino</p>
+                </div>
+                <div class="feature-card">
+                    <h4>👶 Tutor Evolutivo</h4>
+                    <p>Sistema de progreso y logros personalizado</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📱 Diseño Responsive</h4>
+                    <p>Experiencia perfecta en todos los dispositivos</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⭐ Sistema de Favoritos</h4>
+                    <p>Biblioteca personal de cuentos preferidos</p>
+                </div>
+            </div>
+
+            <div class="quote">
+                "La luz nunca se fue. Solo esperaba a que cerraras los ojos para que la sintieras arder en tu interior."<br>
+                — El Faro
+            </div>
+        </div>
+
+        <!-- SECCIÓN INSTALACIÓN -->
+        <div id="instalacion" class="content-section">
+            <h2>🚀 Comenzar</h2>
+
+            <h3>Requisitos</h3>
+            <ul>
+                <li>Navegador web moderno (Chrome, Firefox, Safari, Edge)</li>
+                <li>Servidor web local (opcional, pero recomendado)</li>
+            </ul>
+
+            <h3>Instalación Rápida</h3>
+            
+            <div class="command">
+                # Clonar el repositorio<br>
+                git clone https://github.com/tuusuario/faro_cuantico_familiar.git<br><br>
+                
+                # Entrar al directorio<br>
+                cd faro_cuantico_familiar
+            </div>
+
+            <h4>Opción 1: Servidor Python</h4>
+            <div class="command">
+                # Python 3<br>
+                python3 -m http.server 8000<br><br>
+                
+                # Python 2<br>
+                python -m SimpleHTTPServer 8000
+            </div>
+
+            <h4>Opción 2: Servidor Node.js</h4>
+            <div class="command">
+                # Usando serve<br>
+                npx serve .<br><br>
+                
+                # O usando http-server<br>
+                npx http-server
+            </div>
+
+            <h4>Opción 3: Abrir Directamente</h4>
+            <p>Puedes abrir <code>index.html</code> directamente en tu navegador, pero algunas funciones como la carga de JSON pueden no funcionar correctamente debido a políticas CORS.</p>
+
+            <div class="warning">
+                <strong>⚠️ Importante:</strong> Para evitar problemas de CORS, siempre usa un servidor local cuando trabajes con archivos JSON.
+            </div>
+
+            <h3>🔧 Solución de Problemas</h3>
+            
+            <h4>Error de CORS al cargar JSON</h4>
+            <p><strong>Síntoma:</strong> Los cuentos no se cargan, consola muestra error CORS</p>
+            <p><strong>Solución:</strong> Usar un servidor local en lugar de abrir el archivo directamente</p>
+
+            <h4>El menú móvil no funciona</h4>
+            <p><strong>Solución:</strong> Verificar que el JavaScript esté cargado correctamente</p>
+
+            <h4>Los cuentos no se abren</h4>
+            <p><strong>Solución:</strong> Verificar la consola del navegador para errores</p>
+        </div>
+
+        <!-- SECCIÓN USO -->
+        <div id="uso" class="content-section">
+            <h2>📖 Guía de Uso</h2>
+
+            <h3>Primeros Pasos</h3>
+
+            <div class="feature-card">
+                <h4>1. Explorar el Dashboard</h4>
+                <p>Mira las estadísticas generales, revisa los cuentos destacados y lee el mensaje mágico del niño</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>2. Navegar por la Biblioteca</h4>
+                <p>Usa los filtros por categoría, busca cuentos específicos y lee las vistas previas</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>3. Leer un Cuento Completo</h4>
+                <p>Haz clic en "Leer Completo", el cuento se abre en un modal, puedes compartirlo o agregarlo a favoritos</p>
+            </div>
+
+            <h3>Características Avanzadas</h3>
+
+            <h4>Sistema de Favoritos</h4>
+            <ol>
+                <li>Haz clic en ⭐ en cualquier cuento</li>
+                <li>Los favoritos se guardan automáticamente</li>
+                <li>Accede a ellos en "Mi Aprendizaje"</li>
+            </ol>
+
+            <h4>Aventuras Interactivas</h4>
+            <ol>
+                <li>Ve al módulo "Interactivo"</li>
+                <li>Elige una aventura</li>
+                <li>Toma decisiones que cambian la historia</li>
+                <li>Gana experiencia y logros</li>
+            </ol>
+
+            <h4>Analizador Profundo</h4>
+            <ul>
+                <li>Descubre patrones en los cuentos</li>
+                <li>Ve análisis de emociones y arquetipos</li>
+                <li>Entiende la estructura narrativa</li>
+            </ul>
+
+            <h3>🎯 Tips y Trucos</h3>
+
+            <div class="tip">
+                <strong>📱 En Móviles:</strong> Usa el menú hamburguesa (☰), desliza para navegar, toca para seleccionar opciones
+            </div>
+
+            <div class="tip">
+                <strong>🎯 Para Maximizar el Aprendizaje:</strong> Sigue las recomendaciones del tutor, completa los logros, explora diferentes categorías de cuentos
+            </div>
+
+            <div class="tip">
+                <strong>🔍 Búsqueda Avanzada:</strong> Puedes buscar por títulos, contenido, categorías y temas específicos
+            </div>
+        </div>
+
+        <!-- SECCIÓN MÓDULOS -->
+        <div id="modulos" class="content-section">
+            <h2>🎨 Módulos del Sistema</h2>
+
+            <div class="module-card">
+                <h3>🌌 Dashboard Principal</h3>
+                <ul>
+                    <li>Estadísticas en tiempo real</li>
+                    <li>Cuentos destacados</li>
+                    <li>Acciones rápidas</li>
+                    <li>Mensajes mágicos del niño</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h3>📚 Biblioteca Interactiva</h3>
+                <ul>
+                    <li>Colección completa de 34+ cuentos</li>
+                    <li>Filtros por categoría (Agua, Mujer, Tejedor, Artesano, etc.)</li>
+                    <li>Búsqueda en tiempo real</li>
+                    <li>Vista previa de contenido</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h3>🧠 Analizador Profundo</h3>
+                <ul>
+                    <li>Análisis de arquetipos narrativos</li>
+                    <li>Detección de emociones en los cuentos</li>
+                    <li>Estructuras narrativas identificadas</li>
+                    <li>Patrones mágicos revelados</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h3>🎭 Taller Interactivo</h3>
+                <ul>
+                    <li><strong>El Barquero del Río Invisible</strong> - Viaje de confianza</li>
+                    <li><strong>La Tejedora del Valle</strong> - Creación de realidades</li>
+                    <li><strong>El Faro Fundacional</strong> - Descubrimiento de la luz interior</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h3>👶 Mi Aprendizaje</h3>
+                <ul>
+                    <li>Perfil personalizado del niño</li>
+                    <li>Sistema de logros y recompensas</li>
+                    <li>Recomendaciones inteligentes</li>
+                    <li>Biblioteca de favoritos</li>
+                </ul>
+            </div>
+
+            <h3>📊 Datos y Cuentos</h3>
+
+            <h4>Estructura del JSON de Cuentos</h4>
+            <div class="json-example">
+{<br>
+  "metadata": {<br>
+    "fecha_creacion": "2025-11-22T18:21:39.977282",<br>
+    "total_cuentos": 34,<br>
+    "total_palabras": 8367,<br>
+    "version": "COMPLETA_2.0"<br>
+  },<br>
+  "cuentos": [<br>
+    {<br>
+      "titulo_real": "**El Faro**",<br>
+      "categoria": "🌊 Elementos Acuáticos",<br>
+      "palabras": 462,<br>
+      "contenido": "Había una vez un faro...",<br>
+      "es_real": true,<br>
+      "temas": ["autodescubrimiento", "luz interior"]<br>
+    }<br>
+  ]<br>
+}
+            </div>
+
+            <h4>Categorías Disponibles</h4>
+            <ul>
+                <li>🌊 Elementos Acuáticos</li>
+                <li>👩 Sabiduría Femenina</li>
+                <li>🧵 Tejedor de Realidades</li>
+                <li>🛠️ Artesano del Alma</li>
+                <li>👗 Sastre de Destinos</li>
+                <li>💡 Farero de Esperanzas</li>
+            </ul>
+        </div>
+
+        <!-- SECCIÓN TÉCNICA -->
+        <div id="tecnica" class="content-section">
+            <h2>🔧 Estructura Técnica</h2>
+
+            <h3>Tecnologías Utilizadas</h3>
+            <ul>
+                <li><strong>HTML5</strong> - Estructura semántica</li>
+                <li><strong>CSS3</strong> - Diseño responsive con variables CSS</li>
+                <li><strong>JavaScript ES6+</strong> - Interactividad y lógica</li>
+                <li><strong>LocalStorage</strong> - Persistencia de datos del usuario</li>
+            </ul>
+
+            <h3>Arquitectura</h3>
+            <div class="json-example">
+// Sistema modular basado en componentes<br>
+Módulos: Dashboard, Biblioteca, Analizador, Interactivo, Tutor<br>
+Sistemas: Navegación, Búsqueda, Favoritos, Logros, Recomendaciones
+            </div>
+
+            <h3>Características Responsive</h3>
+            <ul>
+                <li><strong>Desktop</strong>: Navegación completa visible</li>
+                <li><strong>Tablet</strong>: Diseño adaptado</li>
+                <li><strong>Móvil</strong>: Menú hamburguesa deslizable</li>
+            </ul>
+
+            <h3>🎯 Sistema de Tutor Evolutivo</h3>
+
+            <h4>Logros Mágicos</h4>
+            <ul>
+                <li>📖 <strong>Iniciador de Sueños</strong> - Primer cuento leído</li>
+                <li>📚 <strong>Lector Ávido</strong> - 5 cuentos completados</li>
+                <li>🏆 <strong>Experto en Cuentos</strong> - 10 cuentos completados</li>
+                <li>⭐ <strong>Coleccionista de Estrellas</strong> - 3 favoritos</li>
+                <li>🎭 <strong>Aventurero Valiente</strong> - Aventura completada</li>
+            </ul>
+
+            <h4>Recomendaciones Inteligentes</h4>
+            <ul>
+                <li>Basadas en favoritos y historial de lectura</li>
+                <li>Cuentos similares por categoría</li>
+                <li>Aventuras pendientes por completar</li>
+                <li>Cuentos extensos para lectores avanzados</li>
+            </ul>
+
+            <h3>🔮 Personalización</h3>
+
+            <h4>Variables CSS Personalizables</h4>
+            <div class="json-example">
+:root {<br>
+    --color-magico: #ff6b6b;<br>
+    --color-agua: #4ecdc4;<br>
+    --color-tiempo: #45b7d1;<br>
+    --color-sueño: #96ceb4;<br>
+    --color-sabiduria: #feca57;<br>
+    --color-purpura: #a78bfa;<br>
+    --color-rosa: #f9a8d4;<br>
+}
+            </div>
+
+            <h4>Agregar Nuevos Cuentos</h4>
+            <ol>
+                <li>Agregar el cuento al archivo <code>cuentos_reales_COMPLETOS.json</code></li>
+                <li>Mantener la estructura de campos requeridos</li>
+                <li>El sistema detectará automáticamente los nuevos cuentos</li>
+            </ol>
+        </div>
+
+        <!-- SECCIÓN CONTRIBUIR -->
+        <div id="contribuir" class="content-section">
+            <h2>🤝 Contribuir</h2>
+
+            <h3>Cómo Contribuir</h3>
+            <ol>
+                <li>Fork el proyecto</li>
+                <li>Crea una rama para tu feature (<code>git checkout -b feature/magiaNueva</code>)</li>
+                <li>Commit tus cambios (<code>git commit -am 'Agregar magia nueva'</code>)</li>
+                <li>Push a la rama (<code>git push origin feature/magiaNueva</code>)</li>
+                <li>Abre un Pull Request</li>
+            </ol>
+
+            <h3>Guía de Estilo</h3>
+            <ul>
+                <li>Código comentado en español</li>
+                <li>Variables descriptivas en camelCase</li>
+                <li>Funciones documentadas con JSDoc</li>
+                <li>Commits semánticos</li>
+            </ul>
+
+            <h3>📝 Licencia</h3>
+            <p>Este proyecto está bajo la Licencia MIT - ver el archivo <code>LICENSE</code> para detalles.</p>
+
+            <div class="quote">
+                <h3>✨ Magia y Créditos</h3>
+                <p>Creado con 💖 y ✨ para fomentar la lectura y la imaginación en los niños.</p>
+                <p><strong>¡Que la magia del Faro Cuántico ilumine tu camino!</strong> 🌟</p>
+            </div>
+
+            <div class="center">
+                <p><em>¿Listo para explorar el Faro Cuántico?</em></p>
+                <p>
+                    <a href="index.html" style="display: inline-block; background: linear-gradient(135deg, var(--color-magico), var(--color-rosa)); color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: all 0.3s ease;">
+                        🌌 Entrar al Faro Cuántico
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarSeccion(seccionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.content-section').forEach(seccion => {
+                seccion.classList.remove('active');
+            });
+            
+            // Remover activo de todos los tabs
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Mostrar sección seleccionada
+            document.getElementById(seccionId).classList.add('active');
+            
+            // Activar tab seleccionado
+            event.target.classList.add('active');
+            
+            // Scroll suave al inicio de la sección
+            document.getElementById(seccionId).scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Detectar hash de URL al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                mostrarSeccion(hash);
+            }
+        });
+    </script>
+</body>
+</html>

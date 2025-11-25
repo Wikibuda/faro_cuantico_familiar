@@ -1,0 +1,5 @@
+### **El Guardián de los Susurros**
+
+En el pueblo había un hombre que vivía en una cabaña junto al bosque. Su oficio era único: coleccionaba susurros. 🍂 Con una concha de mar pegada al oído, caminaba por los senderos al atardecer, capturando los sonidos que nadie más podía oír: el suspiro de una hoja al desprenderse, el rumor de las raíces bebiendo, el eco de una promesa hecha en voz baja.
+
+En su cabaña, guardaba estos susurros en frascos de cristal opaco. Cuando alguien llegaba cargado de ruido interior—ansiedades, pensamientos frenéticos—él elegía un frasco y lo destapaba suavemente. No se escuchaba nada, pero una calma profunda inundaba la habitación, silenciando el caos mental. El visitante se iba sin una palabra, llevando consigo el suspiro curativo del mundo natural. El guardián no vendía nada; solo prestaba pedazos de silencio. 🕊️
