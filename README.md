@@ -1,22 +1,8 @@
-📁 ESTRUCTURA DE ARCHIVOS:
-
-text
-faro_cuantico_familiar/
-├── 📄 README.md
-├── 📄 index.html (tu dashboard_cuantico.html renombrado)
-├── 📁 docs/
-│   ├── 📄 INSTALACION.md
-│   ├── 📄 USO.md
-│   └── 📄 ESTRUCTURA.md
-├── 📁 assets/
-│   ├── 📁 images/
-│   └── 📁 icons/
-└── 📁 data/
-    └── cuentos_reales_COMPLETOS.json
-📄 README.md
-
-markdown
 # 🌌 Faro Cuántico Familiar
+
+![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)
 
 <div align="center">
 
@@ -63,6 +49,7 @@ python3 -m http.server 8000
 npx serve .
 
 # O simplemente abrir index.html en el navegador
+
 Uso Básico
 Abrir index.html en tu navegador
 
@@ -129,10 +116,11 @@ JavaScript ES6+ - Interactividad y lógica
 LocalStorage - Persistencia de datos del usuario
 
 Arquitectura
-javascript
+
 // Sistema modular basado en componentes
 Modulos: Dashboard, Biblioteca, Analizador, Interactivo, Tutor
 Sistemas: Navegación, Búsqueda, Favoritos, Logros, Recomendaciones
+
 Características Responsive
 Desktop: Navegación completa visible
 
@@ -142,7 +130,7 @@ Móvil: Menú hamburguesa deslizable
 
 📊 Datos y Cuentos
 Estructura del JSON de Cuentos
-json
+
 {
   "metadata": {
     "fecha_creacion": "2025-11-22T18:21:39.977282",
@@ -161,6 +149,7 @@ json
     }
   ]
 }
+
 Categorías Disponibles
 🌊 Elementos Acuáticos
 
@@ -197,7 +186,7 @@ Cuentos extensos para lectores avanzados
 
 🔮 Personalización
 Variables CSS Personalizables
-css
+
 :root {
     --color-magico: #ff6b6b;
     --color-agua: #4ecdc4;
@@ -207,6 +196,7 @@ css
     --color-purpura: #a78bfa;
     --color-rosa: #f9a8d4;
 }
+
 Agregar Nuevos Cuentos
 Agregar el cuento al archivo cuentos_reales_COMPLETOS.json
 
@@ -248,256 +238,4 @@ Creado con 💖 y ✨ para fomentar la lectura y la imaginación en los niños.
 — El Faro
 
 </div> ```
-📄 docs/INSTALACION.md
 
-markdown
-# 🚀 Guía de Instalación
-
-## Opción 1: Servidor Local (Recomendado)
-
-### Con Python
-```bash
-# Python 3
-python3 -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-Con Node.js
-bash
-# Usando serve
-npx serve .
-
-# O usando http-server
-npx http-server
-Con PHP
-bash
-php -S localhost:8000
-Opción 2: Abrir Directamente
-Puedes abrir index.html directamente en tu navegador, pero algunas funciones como la carga de JSON pueden no funcionar correctamente debido a políticas CORS.
-
-Opción 3: Servidor Web Real
-Apache/Nginx
-Sube todos los archivos a tu servidor web
-
-Asegúrate de que el archivo JSON esté accesible
-
-El sistema funcionará inmediatamente
-
-🔧 Solución de Problemas
-Error de CORS al cargar JSON
-Síntoma: Los cuentos no se cargan, consola muestra error CORS
-
-Solución: Usar un servidor local en lugar de abrir el archivo directamente
-
-El menú móvil no funciona
-Solución: Verificar que el JavaScript esté cargado correctamente
-
-Los cuentos no se abren
-Solución: Verificar la consola del navegador para errores
-
-text
-
-**📄 docs/USO.md**
-```markdown
-# 📖 Guía de Uso
-
-## Primeros Pasos
-
-### 1. Explorar el Dashboard
-- Mira las estadísticas generales
-- Revisa los cuentos destacados
-- Lee el mensaje mágico del niño
-
-### 2. Navegar por la Biblioteca
-- Usa los filtros por categoría
-- Busca cuentos específicos
-- Lee las vistas previas
-
-### 3. Leer un Cuento Completo
-- Haz clic en "Leer Completo"
-- El cuento se abre en un modal
-- Puedes compartirlo o agregarlo a favoritos
-
-## Características Avanzadas
-
-### Sistema de Favoritos
-1. Haz clic en ⭐ en cualquier cuento
-2. Los favoritos se guardan automáticamente
-3. Accede a ellos en "Mi Aprendizaje"
-
-### Aventuras Interactivas
-1. Ve al módulo "Interactivo"
-2. Elige una aventura
-3. Toma decisiones que cambian la historia
-4. Gana experiencia y logros
-
-### Analizador Profundo
-- Descubre patrones en los cuentos
-- Ve análisis de emociones y arquetipos
-- Entende la estructura narrativa
-
-## Tips y Trucos
-
-### 📱 En Móviles
-- Usa el menú hamburguesa (☰)
-- Desliza para navegar
-- Toca para seleccionar opciones
-
-### 🎯 Para Maximizar el Aprendizaje
-- Sigue las recomendaciones del tutor
-- Completa los logros
-- Explora diferentes categorías de cuentos
-
-### 🔍 Búsqueda Avanzada
-Puedes buscar por:
-- Títulos
-- Contenido
-- Categorías  
-- Temas específicos
-📄 docs/ESTRUCTURA.md
-
-markdown
-# 🏗️ Estructura del Proyecto
-
-## Arquitectura General
-faro_cuantico_familiar/
-├── 📄 index.html # Aplicación principal
-├── 📁 data/
-│ └── cuentos_reales_COMPLETOS.json # Base de datos de cuentos
-├── 📁 docs/ # Documentación
-└── 📁 assets/ # Recursos estáticos
-
-text
-
-## Flujo de Datos
-
-### Carga de Cuentos
-```javascript
-cargarCuentosReales() 
-    → fetch('cuentos_reales_COMPLETOS.json')
-    → procesarDatos()
-    → actualizarInterfaz()
-Sistema de Favoritos
-javascript
-marcarComoFavorito()
-    → localStorage.setItem()
-    → actualizarContadores()
-    → actualizarInterfaz()
-Navegación entre Módulos
-javascript
-cambiarModulo()
-    → ocultarModulos()
-    → mostrarModulo()
-    → cargarContenidoEspecifico()
-Componentes Principales
-1. Sistema de Navegación
-Responsive: Menú desktop/móvil
-
-Estado: Mantiene módulo activo
-
-Historial: Manejo de navegación
-
-2. Gestor de Cuentos
-Carga: Desde JSON estático
-
-Búsqueda: Tiempo real con múltiples estrategias
-
-Filtrado: Por categorías y temas
-
-3. Sistema de UI/UX
-Modales: Para lectura de cuentos
-
-Notificaciones: Feedback al usuario
-
-Animaciones: Transiciones suaves
-
-4. Tutor Evolutivo
-Logros: Sistema de desbloqueo
-
-Recomendaciones: Algoritmo inteligente
-
-Progreso: Seguimiento de actividad
-
-Estructura de Datos
-Cuento Individual
-javascript
-{
-  titulo_real: "**El Faro**",
-  categoria: "🌊 Elementos Acuáticos",
-  palabras: 462,
-  contenido: "Texto completo del cuento...",
-  es_real: true,
-  temas: ["autodescubrimiento", "luz interior"],
-  personajes: ["FARO", "LUCIÉRNAGA"]
-}
-Perfil de Usuario
-javascript
-{
-  nivel: 1,
-  experiencia: 4404,
-  cuentosLeidos: ["**El Faro**", "**La Casa...**"],
-  logros: ["Iniciador de Sueños", "Lector Ávido"]
-}
-Responsive Design
-Breakpoints
-> 1024px: Desktop completo
-
-769px - 1024px: Tablet
-
-< 768px: Móvil con menú hamburguesa
-
-Estrategias Mobile-First
-CSS Grid y Flexbox
-
-Unidades relativas (rem, %)
-
-Media queries progresivas
-
-text
-
-**📄 .gitignore**
-```gitignore
-# Dependencias
-node_modules/
-npm-debug.log*
-
-# Entornos de desarrollo
-.env
-.env.local
-
-# Archivos del sistema
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Archivos temporales
-*.tmp
-*.temp
-
-# Backup files
-*.backup
-📄 LICENSE
-
-text
-MIT License
-
-Copyright (c) 2024 Faro Cuántico Familiar
-
-Por la presente se concede permiso, libre de cargos, a cualquier persona que obtenga una copia
-de este software y de los archivos de documentación asociados (el "Software"), a utilizar
-el Software sin restricción, incluyendo sin limitación los derechos a usar, copiar, modificar,
-fusionar, publicar, distribuir, sublicenciar, y/o vender copias del Software, y a permitir
-a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las
-siguientes condiciones:
-
-El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias
-o partes sustanciales del Software.
-
-EL SOFTWARE SE PROPORCIONA "COMO ESTÁ", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA,
-INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO
-PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN
-RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN
-DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, QUE SURJA DE O EN CONEXIÓN CON EL SOFTWARE
-O EL USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
