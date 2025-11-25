@@ -70,7 +70,7 @@
 *Donde los cuentos cobran vida y la magia es real* ✨
 
 ![Version](https://img.shields.io/badge/version-2.0.0-magenta)
-![Licencia](https://img.shields.io/badge/licencia-MIT-blue)(LICENSE)
+![Licencia](https://img.shields.io/badge/licencia-MIT-blue)
 ![Magia](https://img.shields.io/badge/magia-100%25-pink)
 
 </div>
