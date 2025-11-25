@@ -10,7 +10,7 @@
 - **Acciones rápidas** - Navega rápidamente a otras secciones
 
 ### 2. 📚 Navegar por la Biblioteca
-```javascript
+
 // CÓMO USAR LA BIBLIOTECA:
 1. 👆 Haz clic en "📚 Biblioteca" en el menú
 2. 🎛️ Usa los filtros por categoría (Agua, Mujer, Tejedor, etc.)
