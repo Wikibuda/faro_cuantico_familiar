@@ -1,7 +1,5 @@
 # 🌌 Faro Cuántico Familiar
 
-# 🌌 Faro Cuántico Familiar
-
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://wikibuda.github.io/faro_cuantico_familiar/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)](CONTRIBUTING.md)
