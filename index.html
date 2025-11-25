@@ -1093,7 +1093,7 @@
         async function cargarCuentosReales() {
             try {
                 const timestamp = new Date().getTime();
-                const respuesta = await fetch(`cuentos_reales_COMPLETOS.json?t=${timestamp}`);
+                const respuesta = await fetch(`data/cuentos_reales_COMPLETOS.json?t=${timestamp}`);
                 const datos = await respuesta.json();
 
                 console.log("📚 CUENTOS COMPLETOS cargados:", datos.cuentos.length);
