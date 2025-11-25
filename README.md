@@ -8,7 +8,7 @@
 
 - **🌐 [Sitio Web en Vivo](https://wikibuda.github.io/faro_cuantico_familiar/)** - ¡Pruébalo ahora!
 - **📄 [Licencia MIT](LICENSE)** - Términos de uso
-- **🤝 [Guía de Contribuciones](docs/CONTRIBUTING.md)** - ¡Únete al desarrollo!
+- **🤝 [Guía de Contribuciones](CONTRIBUTING.md)** - ¡Únete al desarrollo!
 - **📚 [Documentación Completa](docs/)** - Todo lo que necesitas saber
 
 ## 📞 Enlaces Importantes
